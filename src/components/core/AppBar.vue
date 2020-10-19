@@ -1,6 +1,6 @@
 <template>
   <v-app-bar color="white" elevation="1">
-    <router-link to=""
+    <router-link to="/camera"
       ><v-btn icon><v-icon>mdi-camera</v-icon></v-btn></router-link
     >
     <v-spacer></v-spacer>

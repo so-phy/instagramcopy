@@ -16,4 +16,10 @@
   a {
     text-decoration: none;
   }
+
+  // careful : css about vuetify components
+  .plus-badge > span > span {
+    left: calc(100% - 20px) !important;
+    top: calc(100% - 20px) !important;
+  }
 </style>
