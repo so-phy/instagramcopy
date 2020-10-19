@@ -3,6 +3,7 @@
     <div class="home-content">
       <core-app-bar></core-app-bar>
       <core-view></core-view>
+      <core-footer></core-footer>
     </div>
   </div>
 </template>
@@ -15,6 +16,7 @@
     components: {
       CoreAppBar: () => import('@/components/core/AppBar.vue'),
       CoreView: () => import('@/components/core/CoreView.vue'),
+      CoreFooter: () => import('@/components/core/CoreFooter.vue'),
     },
   };
 </script>
@@ -27,7 +29,9 @@
   }
   .home-content {
     background-color: white;
-    min-width: 560px;
+    max-width: 560px;
+    width: 100%;
     min-height: 100vh;
+    position: relative;
   }
 </style>

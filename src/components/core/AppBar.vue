@@ -1,8 +1,18 @@
 <template>
-  <v-app-bar color="white">
-    <v-icon large color="red">mdi-pinterest</v-icon>
-    <router-link to="/"><v-btn rounded dark>홈</v-btn></router-link>
-    <router-link to="/following"><v-btn rounded>팔로잉</v-btn></router-link>
+  <v-app-bar color="white" elevation="1">
+    <router-link to=""
+      ><v-btn icon><v-icon>mdi-camera</v-icon></v-btn></router-link
+    >
+    <v-spacer></v-spacer>
+    <v-img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png"
+      alt="logo"
+      max-width="120"
+    />
+    <v-spacer></v-spacer>
+    <router-link to=""
+      ><v-btn icon><v-icon>mdi-send</v-icon></v-btn></router-link
+    >
   </v-app-bar>
 </template>
 

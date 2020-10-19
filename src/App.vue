@@ -5,11 +5,15 @@
 </template>
 
 <script>
-
-export default {
-  name: "App",
-  data: () => ({
-    //
-  })
-};
+  export default {
+    name: 'App',
+    data: () => ({
+      //
+    }),
+  };
 </script>
+<style lang="scss">
+  a {
+    text-decoration: none;
+  }
+</style>
