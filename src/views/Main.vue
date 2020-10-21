@@ -1,7 +1,7 @@
 <template>
   <div>
     <story-slider></story-slider>
-    <post v-for="(post, i) in posts" :key="i" :post="post"></post>
+    <post v-for="(post, i) in posts" :key="i" :post="post" :index="i"></post>
   </div>
 </template>
 
