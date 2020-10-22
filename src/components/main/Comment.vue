@@ -1,13 +1,18 @@
 <template>
   <div class="comment-container">
     <div class="button-wrapper">
-      <v-dialog v-model="dialog" width="500">
+      <v-dialog v-model="dialog.on" width="500">
         <template v-slot:activator="{ on, attrs }">
           <button v-bind="attrs" v-on="on">
             댓글 {{ comments.length }}개 모두 보기
           </button>
         </template>
-        <comment-push :comments="comments" :user-img="userImg" :index="index" ></comment-push>
+        <comment-push
+          :comments="comments"
+          :user-img="userImg"
+          :index="index"
+          :dialog="dialog"
+        ></comment-push>
       </v-dialog>
     </div>
     <div class="comments-wrapper">
@@ -33,7 +38,12 @@
     props: ['comments', 'userImg', 'index'],
     components: {
       CommentPush: () => import('@/components/main/CommentPush.vue'),
-    }
+    },
+    data() {
+      return {
+        dialog: {on: false},
+      };
+    },
   };
 </script>
 

@@ -2,7 +2,7 @@
   <div>
     <v-card>
       <v-row class="card-title" justify="center" align="center">
-        <v-btn icon @click="dialog = false"><v-icon>mdi-close</v-icon></v-btn>
+        <v-btn icon @click="dialog.on = false"><v-icon>mdi-close</v-icon></v-btn>
         <v-spacer></v-spacer>
         <h3>댓글</h3>
         <v-spacer></v-spacer>
@@ -23,7 +23,7 @@
           </template>
         </v-text-field>
       </v-row>
-      <div class="like-user-list">
+      <div class="comment-user-list">
         <v-row
           v-for="(comment, i) in comments"
           :key="i"
@@ -45,7 +45,7 @@
 <script>
   export default {
     name: 'CommentPush',
-    props: ['comments', 'userImg', 'index'],
+    props: ['comments', 'userImg', 'index', 'dialog'],
     data() {
       return {
         myComment: '',
