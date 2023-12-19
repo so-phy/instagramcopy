@@ -2,9 +2,12 @@
   <div>
     <v-card>
       <v-row class="card-title" justify="center" align="center">
-        <v-btn icon @click="dialog.on = false"><v-icon>mdi-close</v-icon></v-btn>
+        <v-btn icon @click="dialog.on = false"
+          ><v-icon>mdi-close</v-icon></v-btn
+        >
         <v-spacer></v-spacer>
         <h3>댓글</h3>
+        <h2>codesandbox test</h2>
         <v-spacer></v-spacer>
         <v-btn icon><v-icon>mdi-send</v-icon></v-btn>
       </v-row>
@@ -43,50 +46,50 @@
 </template>
 
 <script>
-  export default {
-    name: 'CommentPush',
-    props: ['comments', 'userImg', 'index', 'dialog'],
-    data() {
-      return {
-        myComment: '',
-      };
+export default {
+  name: "CommentPush",
+  props: ["comments", "userImg", "index", "dialog"],
+  data() {
+    return {
+      myComment: "",
+    };
+  },
+  methods: {
+    pushComment() {
+      this.$store.commit("pushComment", {
+        index: this.index,
+        name: "me",
+        text: this.myComment,
+      });
     },
-    methods: {
-      pushComment() {
-        this.$store.commit('pushComment', {
-          index: this.index,
-          name: 'me',
-          text: this.myComment,
-        });
-      },
-    },
-  };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-  .card-title {
-    height: 60px;
-    padding: 0 20px;
-    border: 1px solid #80808054;
+.card-title {
+  height: 60px;
+  padding: 0 20px;
+  border: 1px solid #80808054;
 
-    h3 {
-      display: inline-block;
-    }
+  h3 {
+    display: inline-block;
   }
-  .comment-text-filed-wrapper {
-    padding: 10px 15px;
-    background-color: #eee;
-  }
-  .add-comment-text-filed {
-    height: 50px;
-    margin-left: 10px;
-  }
+}
+.comment-text-filed-wrapper {
+  padding: 10px 15px;
+  background-color: #eee;
+}
+.add-comment-text-filed {
+  height: 50px;
+  margin-left: 10px;
+}
 
-  .list-item {
-    padding: 16px;
-    p {
-      margin: 0;
-      max-width: 90%;
-    }
+.list-item {
+  padding: 16px;
+  p {
+    margin: 0;
+    max-width: 90%;
   }
+}
 </style>
